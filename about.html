@@ -1,0 +1,53 @@
+<section id="about" class="about-section">
+    <div class="container">
+      <h2>About Weather Pulse</h2>
+      <p>
+        Weather Pulse is an intuitive and real-time weather forecasting dashboard
+        that provides accurate weather predictions. Stay updated with the latest
+        temperature, humidity, wind speed, and much more!
+      </p>
+      <p>
+        Designed with a user-friendly interface, Weather Pulse ensures seamless
+        navigation and an interactive experience. Whether you're planning a trip
+        or just curious about the weather, we've got you covered!
+      </p>
+    </div>
+  </section>
+  
+  <style>
+    body{
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+    }
+    .about-section {
+      /* background: linear-gradient(to right, #4facfe, #00f2fe); */
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .about-section .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .about-section h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .about-section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+  </style>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const aboutSection = document.getElementById("about");
+      aboutSection.style.opacity = "0";
+      aboutSection.style.transform = "translateY(20px)";
+      setTimeout(() => {
+        aboutSection.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+        aboutSection.style.opacity = "1";
+        aboutSection.style.transform = "translateY(0)";
+      }, 300);
+    });
+  </script>
+  

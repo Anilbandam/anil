@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/work.css">
+</head>
+
+<body style="border-radius:unset;">
+    
+
+    <section id="earth" class="earth"></section>
+
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="default.mp4" type="video/mp4">
+
+        </video>
+    </div>
+
+    <div class="weather-card">
+        <div>
+            <h2 class="heading">Weather Pulse</h2>
+        </div>
+
+        <img id="icon" src="/sunny.jpg" alt="image">
+
+        <div class="input-field">
+            <input type="text" id="city-input" required spellcheck="false">
+            <button id="sub-btn"><b>submit</b></button>
+            <label class="city_lable">Enter city name</label>
+        </div>
+        <div class="icons">
+            <div class="icon2"><i class="fas fa-thermometer-full"></i>
+                <label>Temperature</label>
+            </div>
+            <div class="icon1"><i class="fas fa-tint"></i>
+                <label>Humidity</label>
+            </div>
+            <div class="icon3"><i class="fas fa-wind"></i>
+                <label>Wind Speed</label>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    </section>
+
+    <script src="./script2.js"></script>
+</body>
+
+</html>

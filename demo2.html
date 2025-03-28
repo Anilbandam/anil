@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Pulse Dashboard</title>
+    <link rel="stylesheet" href="demo2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source id="video-source" src="clody.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <!-- Search Box -->
+        <div id="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name..." />
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <!-- Main Weather Info -->
+        <div id="main-info">
+            <h2 id="city-name">Weather Dashboard</h2>
+            <p id="temperature">Temperature: --°C</p>
+            <p id="condition">Condition: --</p>
+            <p id="humidity">Humidity: --%</p>
+            <p id="wind-speed">Wind Speed: -- km/h</p>
+            <p id="air-quality">Air Quality: --</p>
+        </div>
+
+        <!-- Trend Chart for Temperature -->
+        <div class="chart-container">
+            <canvas id="tempChart"></canvas>
+        </div>
+
+        <!-- Hourly Forecast Cards -->
+        <div id="hourly-forecast" class="forecast-container"></div>
+
+        <!-- Weekly Forecast Cards -->
+        <div id="weekly-forecast" class="forecast-container"></div>
+    </div>
+
+    <script src="demo3.js"></script>
+</body>
+</html>

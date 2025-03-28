@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Pulse Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            display:flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            height:50vh;
+            color: #fff;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 200px;
+            background:rgba(233, 234, 241, 0.2);
+            padding:1px;
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            margin-right: 1px;
+            object-fit:none;
+           
+            
+        }
+
+        .sidebar a {
+            color:black;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .sidebar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .dashboard {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #00ccff;
+            text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+            animation: glow 2s infinite alternate;
+            font-size: 10vh;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff; }
+            100% { text-shadow: 0 0 20px #00ff99, 0 0 30px #00ff99; }
+        }
+
+        
+
+
+.title {
+            display: flex;
+            gap:5px;
+            margin-left:60vh;
+            margin-bottom:500vh;
+            font-size:10vh;
+            background-color:black;
+        }
+        .letter {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+            color:blue;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        h2{
+            color:black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        i {
+    color:black
+}
+
+    </style>
+</head>
+<body>
+    
+        <div class="sidebar">
+           <h2> <i class="fa-solid fa-bars"></i> Menu bar</h2>
+
+            <i class="fa-solid fa-house">
+                <a href=" ">Home</a>
+            </i>
+            <i class="fa-solid fa-chart-line">
+                <a href="./demo2.html">Prediction</a>
+            </i>
+
+            <i class="fa-solid fa-location-dot">
+                <a href="demo.html">location</a>
+            </i> 
+            
+            <i class="fa-solid fa-circle-info">
+                <a href="about.html">About</a>
+            </i>
+
+            <div class="title" id="title"></div>
+
+    <script>
+        const titleText = "Weather Pulse";
+        const titleContainer = document.getElementById("title");
+
+        titleText.split("").forEach((char, index) => {
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.classList.add("letter");
+            span.style.animationDelay = `${index * 0.2}s`;
+            titleContainer.appendChild(span);
+        });
+    </script>
+        </div>
+    
+    <img src="nature1.jpg"/>
+    <script src="globe.js"></script>
+</body>
+</html>

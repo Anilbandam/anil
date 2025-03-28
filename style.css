@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+}
+
+#search-box {
+    padding: 10px;
+    text-align: center;
+    background-color: #0288d1;
+    color: white;
+}
+
+#cityInput {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#weather-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #b2ebf2;
+    border-top: 2px solid #0288d1;
+}
